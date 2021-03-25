@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct SlotsView: View {
     @ObservedObject var viewModel = SlotsMachineViewModel(SlotsMachine())
     
@@ -30,7 +28,6 @@ struct SlotsView: View {
                     }
                 }
                 
-                
                 Spacer()
                 
                 HStack {
@@ -47,7 +44,6 @@ struct SlotsView: View {
                     Button(
                         action: {
                             viewModel.resetButtonTapped()
-                            
                         },
                         label: {
                             Text("Start Over").primaryLabel()
@@ -58,7 +54,6 @@ struct SlotsView: View {
                             withAnimation {
                                 viewModel.spinButtonTapped()
                             }
-                           
                         },
                         label: {
                             Text("Spin🤩")
